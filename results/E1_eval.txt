@@ -1,0 +1,39 @@
+== clean test set (103 images), mean and sd over seeds
+head              ce  evidential  ordinal
+qwk      mean  0.650       0.614    0.715
+         std   0.134       0.080    0.017
+acc      mean  0.628       0.589    0.631
+         std   0.066       0.088    0.051
+ref_auc  mean  0.929       0.855    0.935
+         std   0.015       0.054    0.004
+sens     mean  0.854       0.906    0.880
+         std   0.036       0.016    0.009
+spec     mean  0.889       0.615    0.897
+         std   0.104       0.133    0.051
+ece      mean  0.170       0.171    0.117
+         std   0.058       0.071    0.045
+mean_unc mean  0.223       0.686    0.256
+         std   0.015       0.017    0.018
+
+== referral: metrics on kept cases after deferring the most uncertain fraction (mean over seeds)
+              qwk                         acc                        sens                     
+referred      0.0    0.1    0.2    0.3    0.0    0.1    0.2    0.3    0.0    0.1    0.2    0.3
+head                                                                                          
+ce          0.650  0.680  0.698  0.712  0.628  0.642  0.667  0.690  0.854  0.876  0.870  0.865
+evidential  0.614  0.607  0.611  0.603  0.589  0.616  0.646  0.676  0.906  0.892  0.870  0.849
+ordinal     0.715  0.769  0.781  0.778  0.631  0.677  0.711  0.745  0.880  0.889  0.875  0.865
+
+== simulated low-quality capture: QWK, mean uncertainty, AUROC of uncertainty for spotting errors (mean over seeds)
+             qwk                       unc                    unc_err_auc                   
+head          ce evidential ordinal     ce evidential ordinal          ce evidential ordinal
+condition                                                                                   
+blur       0.384      0.314   0.454  0.290      0.703   0.316       0.588      0.697   0.575
+clean      0.650      0.614   0.715  0.223      0.686   0.256       0.641      0.685   0.729
+dark       0.462      0.465   0.495  0.137      0.533   0.140       0.602      0.621   0.604
+jpeg       0.015      0.004   0.007  0.346      0.834   0.339       0.700      0.577   0.607
+lowres     0.397      0.298   0.442  0.286      0.721   0.335       0.634      0.697   0.684
+
+== paired Wilcoxon on per-image |grade error| (mean over seeds)
+ce vs evidential: mean |err| 0.618 vs 0.670, p = 0.274
+ce vs ordinal: mean |err| 0.618 vs 0.566, p = 0.207
+evidential vs ordinal: mean |err| 0.670 vs 0.566, p = 0.034

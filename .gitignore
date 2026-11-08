@@ -1,0 +1,9 @@
+data/
+data_raw/
+models/
+.venv/
+__pycache__/
+*.pyc
+*.pt
+.DS_Store
+*.log

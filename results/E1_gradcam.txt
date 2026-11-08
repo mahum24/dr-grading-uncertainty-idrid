@@ -1,0 +1,4 @@
+lesion area share of fundus: 3.171%; optic disc share: 2.553%
+ce: lesion energy 0.039 (random 0.032, ratio 1.2x, higher than random in 78% of images) | optic disc energy 0.031 (random 0.026) | pointing game 51%
+ordinal: lesion energy 0.051 (random 0.032, ratio 1.6x, higher than random in 96% of images) | optic disc energy 0.004 (random 0.026) | pointing game 57%
+evidential: lesion energy 0.041 (random 0.032, ratio 1.3x, higher than random in 75% of images) | optic disc energy 0.018 (random 0.026) | pointing game 57%
